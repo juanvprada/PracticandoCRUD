@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src\styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Cabecera -->
+        <header class="header">
+
+            <h1> Películas interesantes </h1>
+        </header>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <ul>
+                <li><a href="inicio.html" target="_blank" rel="noopener noreferrer">Inicio</a></li>
+                <li><a href="index.html">Películas</a></li>
+                <li><a href="#search">Series</a></li>
+                <li><a href="contacto.html" target="_blank" rel="noopener noreferrer">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form id="editFilmForm" style="display:none" ;>
+            <input type="hidden" id="editFilmId">
+            <input type="text" id="editTitleField" placeholder="Título" required>
+            <input type="text" id="editGenreField" placeholder="Género" required>
+            <input type="text" id="editActorsField" placeholder="Actores" required>
+            <input type="number" id="editRatingField" placeholder="Puntuación" min="0" max="10" required>
+            <input type="text" id="editTrailerField" placeholder="URL trailer" required>
+            <button type="submit">Actualizar</button>
+            <button type="button" class="noActualizar">Cancelar</button>
+        </form>
+
+
+        <!-- Contenido principal -->
+        <section class="content" id="content">
+
+            <!-- Aquí van las películas -->
+
+
+        </section>
+
+
+        <!-- Barra lateral -->
+        <aside class="aside">
+
+            <!-- Buscador -->
+            <div class="search" id="search">
+                <h3 class="title"> Buscador</h3>
+
+                <form id="searchForm">
+                    <input type="text" id="searchField" placeholder="Buscar película por título..." />
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+
+            <div class="add">
+                <h3 class="title"> Añadir Película</h3>
+
+                <!-- Creador de películas -->
+                <form id="formFilm">
+
+                    <input type="text" id="titleField" placeholder="Título" required>
+                    <input type="text" id="genreField" placeholder="Género" required>
+                    <input type="text" id="actorsField" placeholder="Actores" required>
+                    <input type="number" id="ratingField" placeholder="Puntuación" min="0" max="10" required>
+                    <input type="text" id="trailerField" placeholder="URL trailer" required>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+
+        </aside>
+
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            &copy; Películas interesantes 2024
+        </footer>
+
+    </div>
+    <script src="src/services.js"></script>
+    <script src="src/main.js"></script>
+
+</body>
+
+</html>

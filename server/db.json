@@ -1,0 +1,108 @@
+{
+  "peliculas": [
+    {
+      "id": "4f64",
+      "title": "Siete almas",
+      "genre": "Drama",
+      "main_figures": "Will Smith",
+      "film_rating": 9,
+      "trailer": "https://www.youtube.com/watch?v=VQS-YQ5AzU0"
+    },
+    {
+      "title": "El fuego de la venganza",
+      "genre": "Acción/thriller",
+      "main_figures": "Denzel Washington",
+      "film_rating": 9,
+      "trailer": "https://www.youtube.com/watch?v=p03lTQ_TAXw",
+      "id": "p8"
+    },
+    {
+      "id": "630b",
+      "title": "Un ciudadano ejemplar",
+      "genre": "Thriller",
+      "main_figures": "Gerard Butler",
+      "film_rating": 10,
+      "trailer": "https://www.youtube.com/watch?v=Ymy850IJMTk"
+    },
+    {
+      "title": "El diario de Noa",
+      "genre": "Drama/Romántico",
+      "main_figures": "Ryan Gosling",
+      "film_rating": 9,
+      "trailer": "https://www.youtube.com/watch?v=QoC8q9Oc2w8",
+      "id": "p7"
+    },
+    {
+      "id": "6a96",
+      "title": "Intocable",
+      "genre": "Comedia/Drama",
+      "main_figures": "Omar Sy",
+      "film_rating": 10,
+      "trailer": "https://www.youtube.com/watch?v=Mg2JD7HQr8g"
+    },
+    {
+      "title": "The Equalizer",
+      "genre": "Acción",
+      "main_figures": "Denzel Washington",
+      "film_rating": 9,
+      "trailer": "https://www.youtube.com/watch?v=VjctHUEmutw",
+      "id": "p6"
+    },
+    {
+      "title": "Una Historia del Bronx",
+      "genre": "Drama",
+      "main_figures": "Robert de Niro",
+      "film_rating": 8,
+      "trailer": "https://www.youtube.com/watch?v=q-MZbSJK1zA",
+      "id": "c989"
+    },
+    {
+      "id": "85d5",
+      "title": "El cuarto pasajero",
+      "genre": "Comedia",
+      "main_figures": "Ernesto Alterio",
+      "film_rating": 9,
+      "trailer": "https://www.youtube.com/embed/6hAN_veIi6E?si=3uYgIvqKTMuNI2c3"
+    },
+    {
+      "id": "27b5",
+      "title": "111º",
+      "genre": "Drama",
+      "main_figures": "will",
+      "film_rating": 9,
+      "trailer": "htt"
+    },
+    {
+      "id": "010e",
+      "title": "u666",
+      "genre": "Comedia/Drama",
+      "main_figures": "Omar Sy",
+      "film_rating": 8,
+      "trailer": "jjg"
+    },
+    {
+      "id": "499f",
+      "title": "111111",
+      "genre": "Comedia/Drama",
+      "main_figures": "Omar Sy",
+      "film_rating": 5,
+      "trailer": "dd"
+    },
+    {
+      "id": "95fb",
+      "title": "8888",
+      "genre": "Comedia",
+      "main_figures": "Ernesto Alterio",
+      "film_rating": 8,
+      "trailer": "rr"
+    },
+    {
+      "title": "ppppp",
+      "genre": "Comedia",
+      "main_figures": "Will Smith",
+      "film_rating": 10,
+      "trailer": "ff",
+      "id": "f3fc"
+    }
+  ]
+}
