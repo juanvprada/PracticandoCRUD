@@ -99,8 +99,10 @@ Para ejecutar el proyecto en tu entorno local, sigue estos pasos:
     GitHub: juanvprada
 
 
-    
+## Imagen del Proyecto
+    Aquí se muestra la imagen del proyecto:
 
+    ![Estructura del Proyecto](https://raw.github.com/juanvprada/PracticandoCRUD/blob/main/assets/images/Pantallazo.JPG)
 
 
 
