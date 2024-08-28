@@ -63,6 +63,7 @@ Para ejecutar el proyecto en tu entorno local, sigue estos pasos:
     npm run api
 
 5. **Abre el archivo index.html en tu navegador**:
+    ```bash
     index.html
 
 
@@ -88,11 +89,12 @@ Para ejecutar el proyecto en tu entorno local, sigue estos pasos:
     5. **Visualización de las películas**:
     - La lista de películas se actualizará automáticamente para reflejar los cambios realizados.
 
-## Estructura del proyecto
-    Aquí se muestra la estructura dle proyect:
+## Estructura del Proyecto
+Aquí se muestra la estructura del proyecto:
 
-    ![Estructura del Proyecto](https://github.com/juanvprada/PracticandoCRUD/blob/main/assets/images/Estructura.JPG)
-    
+![Estructura del Proyecto](https://raw.githubusercontent.com/juanvprada/PracticandoCRUD/main/assets/images/Estructura.JPG)
+
+
     
 
 
