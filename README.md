@@ -10,9 +10,6 @@
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Estructura del Proyecto](#estructura-del-proyecto)
-- [Archivo `db.json`](#archivo-dbjson)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
 - [Contacto](#contacto)
 
 ## Descripción
@@ -20,7 +17,7 @@
 CRUD Películas es una aplicación para gestionar una colección de películas. Permite a los usuarios:
 
 - **Añadir nuevas películas** con un título, género, actores principales y puntuación.
-- **Editar películas existentes** para actualizar la información.
+- **Editar y películas existentes** para actualizar la información.
 - **Eliminar películas** de la lista.
 - **Buscar películas** por título, género, actores o puntuación.
 - Ver todos los cambios en tiempo real en la interfaz de usuario.
@@ -87,12 +84,19 @@ Para ejecutar el proyecto en tu entorno local, sigue estos pasos:
     - La lista de películas se actualizará automáticamente para mostrar los resultados de la búsqueda.
 
     5. **Visualización de las películas**:
-    - La lista de películas se actualizará automáticamente para reflejar los cambios realizados.
+    - La lista de películas se actualizará automáticamente para reflejar los cambios realizados y las películas que tengan un 10 de valoración destacarán sobre las demás porque se van a ver con un marco
+    amarillo.
 
 ## Estructura del Proyecto
-Aquí se muestra la estructura del proyecto:
+    Aquí se muestra la estructura del proyecto:
 
-![Estructura del Proyecto](https://raw.githubusercontent.com/juanvprada/PracticandoCRUD/main/assets/images/Estructura.JPG)
+    ![Estructura del Proyecto](https://raw.githubusercontent.com/juanvprada/PracticandoCRUD/main/assets/images/Estructura.JPG)
+
+## Contacto
+
+    Nombre: Juan Vázquez Prada
+    Email: crud-peliculas@gmail.com
+    GitHub: juanvprada
 
 
     
