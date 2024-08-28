@@ -65,44 +65,36 @@
       "trailer": "https://www.youtube.com/embed/6hAN_veIi6E?si=3uYgIvqKTMuNI2c3"
     },
     {
-      "id": "27b5",
-      "title": "111º",
+      "title": "La vida es bella",
       "genre": "Drama",
-      "main_figures": "will",
+      "main_figures": "Roberto Benigni",
       "film_rating": 9,
-      "trailer": "htt"
+      "trailer": "https://www.youtube.com/watch?v=e-Z062tRdbQ",
+      "id": "503c"
     },
     {
-      "id": "010e",
-      "title": "u666",
+      "id": "03c0",
+      "title": "Gran Torino",
+      "genre": "Drama",
+      "main_figures": "Clint Eastwood",
+      "film_rating": 9,
+      "trailer": "https://www.youtube.com/watch?v=8vrDaG-owEc"
+    },
+    {
+      "id": "487d",
+      "title": "Malditos Bastardos",
+      "genre": "Acción/Comedia",
+      "main_figures": "Brad Pitt",
+      "film_rating": 9,
+      "trailer": "https://www.youtube.com/watch?v=2jcTRi8D80k"
+    },
+    {
+      "id": "7a28",
+      "title": "Joker",
       "genre": "Comedia/Drama",
-      "main_figures": "Omar Sy",
+      "main_figures": "Robert de Niro",
       "film_rating": 8,
-      "trailer": "jjg"
-    },
-    {
-      "id": "499f",
-      "title": "111111",
-      "genre": "Comedia/Drama",
-      "main_figures": "Omar Sy",
-      "film_rating": 5,
-      "trailer": "dd"
-    },
-    {
-      "id": "95fb",
-      "title": "8888",
-      "genre": "Comedia",
-      "main_figures": "Ernesto Alterio",
-      "film_rating": 8,
-      "trailer": "rr"
-    },
-    {
-      "title": "ppppp",
-      "genre": "Comedia",
-      "main_figures": "Will Smith",
-      "film_rating": 10,
-      "trailer": "ff",
-      "id": "f3fc"
+      "trailer": "https://www.youtube.com/watch?v=QtZPjL_CbQI"
     }
   ]
 }

@@ -6,7 +6,8 @@ const apiUrl = "http://localhost:3000/peliculas";
 
 // Función para crear película
 async function createFilm(event) {
-    // event.preventDefault();
+    event.preventDefault();
+
     const newFilm = {
         title: document.getElementById('titleField').value,
         genre: document.getElementById('genreField').value,
@@ -15,17 +16,19 @@ async function createFilm(event) {
         trailer: document.getElementById('trailerField').value
     };
 
-    await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newFilm)
     });
 
-    alert("La película se ha añadido correctamente a tu lista");
-    document.getElementById('formFilm').reset();
-    loadFilms(); // Recargar la lista de películas después de crear una nueva
+    if (response.ok) {
+        alert("La película se ha añadido correctamente a tu lista");
+        document.getElementById('formFilm').reset();
+        loadFilms();
+    }
 }
-document.getElementById('formFilm').addEventListener('submit', createFilm); 
+document.getElementById('formFilm').addEventListener('submit', createFilm);
 
 
 // --------------READ--------------- //
@@ -56,20 +59,21 @@ function createFilmHtml(film) {
     `;
 }
 
-// Función para pintar todas las películas del db.json en pantalla
+// Función para pintar en pantalla todas las películas del db.json
 async function printFilms() {
     const films = await getFilms();
     document.getElementById('content').innerHTML = films.map(createFilmHtml).join('');
 
+
     films.forEach(film => {
         const filmElement = document.getElementById('content').querySelector(`.filmItem[data-id='${film.id}']`);
 
-        // Verifica si la película tiene una puntuación de 10 y añade la clase
+        // Aquí añadimos la clase tienesQueVerla a las películas que tengan valoración 10
         if (film.film_rating === 10) {
-            filmElement.classList.add('tienesQueVerla');                            
+            filmElement.classList.add('tienesQueVerla');
         }
 
-        addEventListeners(filmElement, film); // Añade los event listeners a cada película
+        addEventListeners(filmElement, film); //Llamamos a la función que agrega eventListeners a cada película
     });
 }
 
@@ -93,7 +97,7 @@ function populateEditForm(film) {
     document.getElementById('editFilmForm').style.display = 'block';
 }
 
-// Función para actualizar la películamodificada
+// Función para actualizar la película modificada
 async function updateFilm(event) {
     event.preventDefault();
     const id = document.getElementById('editFilmId').value;
@@ -155,33 +159,29 @@ loadFilms();
 
 
 
-
-// Función para buscar películas por título
+// Función para BUSCAR películas
 async function searchFilms(event) {
-    event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
+    event.preventDefault();
 
-    const searchTerm = document.getElementById('searchField').value.toLowerCase(); // Convertir el término de búsqueda a minúsculas
-    const films = await getFilms(); // Obtener todas las películas
+    const searchTerm = document.getElementById('searchField').value.toLowerCase();
+    const films = await getFilms();
 
-    // Filtrar las películas cuyo título coincida con el término de búsqueda
-    const filteredFilms = films.filter(film => 
+    // Filtramos las películas cuyo título,género,actores o puntuación coincidan con el término de búsqueda
+    const filteredFilms = films.filter(film =>
         film.title.toLowerCase().includes(searchTerm) ||
         film.genre.toLowerCase().includes(searchTerm) ||
         film.main_figures.toLowerCase().includes(searchTerm) ||
         film.film_rating.toString().includes(searchTerm)
     );
-      
+
     // Mostrar solo las películas filtradas
     document.getElementById('content').innerHTML = filteredFilms.map(createFilmHtml).join('');
 
     // Añadir event listeners a las películas filtradas
     filteredFilms.forEach(film => {
         const filmElement = document.getElementById('content').querySelector(`.filmItem[data-id='${film.id}']`);
-        addEventListeners(filmElement, film);
+        addEventListeners(filmElement, film);  //Aquí llamamos a la función addEventListener para poder editar o eliminar en las películas encontradas
     });
 }
 
-
-
-// Añadir event listener al formulario de búsqueda
 document.getElementById('searchForm').addEventListener('submit', searchFilms);
