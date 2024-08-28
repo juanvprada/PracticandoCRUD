@@ -1,12 +1,12 @@
 {
   "peliculas": [
     {
-      "id": "4f64",
       "title": "Siete almas",
       "genre": "Drama",
       "main_figures": "Will Smith",
       "film_rating": 9,
-      "trailer": "https://www.youtube.com/watch?v=VQS-YQ5AzU0"
+      "trailer": "https://www.youtube.com/watch?v=VQS-YQ5AzU0",
+      "id": "4f64"
     },
     {
       "title": "El fuego de la venganza",

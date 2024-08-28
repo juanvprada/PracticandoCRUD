@@ -1,4 +1,4 @@
-// --------------UTILIDADES GENERALES--------------- //
+// --------------UTILIDAD GENERAL--------------- //
 const apiUrl = "http://localhost:3000/peliculas";
 
 
@@ -42,7 +42,7 @@ async function getFilms() {
     return response.json();
 }
 
-// Función para crear el HTML de una película
+// Función para crear el HTML de una película (plantilla)
 function createFilmHtml(film) {
     return `
         <article class="filmItem" data-id="${film.id}">
@@ -72,8 +72,8 @@ async function printFilms() {
         if (film.film_rating === 10) {
             filmElement.classList.add('tienesQueVerla');
         }
-
-        addEventListeners(filmElement, film); //Llamamos a la función que agrega eventListeners a cada película
+        filmElement.querySelector('.edit').addEventListener('click', () => populateEditForm(film));
+        filmElement.querySelector('.delete').addEventListener('click', () => deleteFilm(film.id));
     });
 }
 
@@ -86,7 +86,7 @@ async function loadFilms() {
 
 // --------------UPDATE--------------- //
 
-// Función para rellenar el formulario de edicióon cuando se pulsa el botón editar
+// Función para rellenar el formulario de edición oculto con los datos de la película que se quiere modificar
 function populateEditForm(film) {
     document.getElementById('editFilmId').value = film.id;
     document.getElementById('editTitleField').value = film.title;
@@ -122,6 +122,11 @@ async function updateFilm(event) {
 document.getElementById('editFilmForm').addEventListener('submit', updateFilm);
 document.querySelector('.noActualizar').addEventListener('click', closeEditForm);
 
+// Función para que se oculte el formulario de editar
+function closeEditForm() {
+    editFilmForm.style.display = 'none';
+}
+
 
 // --------------DELETE--------------- //
 async function deleteFilm(id) {
@@ -136,24 +141,10 @@ async function deleteFilm(id) {
         if (response.ok) {
             alert("La película se ha eliminado de tu lista");
             loadFilms(); // Recargar la lista de películas después de eliminar una
-        } else {
-            alert("Hubo un problema al eliminar la película. Inténtalo de nuevo.");
         }
     }
 }
 
-// Función para que se oculte el formulario de editar
-function closeEditForm() {
-    editFilmForm.style.display = 'none';
-}
-
-// --------------EVENT LISTENERS--------------- //
-function addEventListeners(htmlFilm, film) {
-    htmlFilm.querySelector('.edit').addEventListener('click', () => populateEditForm(film));
-    htmlFilm.querySelector('.delete').addEventListener('click', () => deleteFilm(film.id));
-}
-
-// --------------CARGADOR DE PELÍCULAS--------------- //
 loadFilms();
 
 
@@ -174,13 +165,15 @@ async function searchFilms(event) {
         film.film_rating.toString().includes(searchTerm)
     );
 
-    // Mostrar solo las películas filtradas
+    // Mostramos solo las películas filtradas
     document.getElementById('content').innerHTML = filteredFilms.map(createFilmHtml).join('');
 
-    // Añadir event listeners a las películas filtradas
+    // Añadimos event listeners a las películas filtradas
     filteredFilms.forEach(film => {
         const filmElement = document.getElementById('content').querySelector(`.filmItem[data-id='${film.id}']`);
-        addEventListeners(filmElement, film);  //Aquí llamamos a la función addEventListener para poder editar o eliminar en las películas encontradas
+
+        filmElement.querySelector('.edit').addEventListener('click', () => populateEditForm(film));
+        filmElement.querySelector('.delete').addEventListener('click', () => deleteFilm(film.id));
     });
 }
 
