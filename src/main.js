@@ -1,7 +1,4 @@
 
-
-
-
 // Código para que el editFilmForm se pueda arrastrar a donde queramos
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('editFilmForm');
