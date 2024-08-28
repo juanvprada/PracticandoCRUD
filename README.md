@@ -102,7 +102,7 @@ Para ejecutar el proyecto en tu entorno local, sigue estos pasos:
 ## Imagen del Proyecto
     Aquí se muestra la imagen del proyecto:
 
-   ![Estructura del Proyecto](https://raw.githubusercontent.com/juanvprada/PracticandoCRUD/dev/assets/images/Pantallazo.JPG)
+    ![Estructura del Proyecto](https://raw.githubusercontent.com/juanvprada/PracticandoCRUD/dev/assets/images/Pantallazo.JPG)
 
 
 
