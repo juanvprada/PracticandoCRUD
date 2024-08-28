@@ -27,7 +27,7 @@
                 <li><a href="contacto.html" target="_blank" rel="noopener noreferrer">Contacto</a></li>
             </ul>
         </nav>
-
+        <!-- Formulario para editar -->
         <form id="editFilmForm" style="display:none" ;>
             <input type="hidden" id="editFilmId">
             <input type="text" id="editTitleField" placeholder="Título" required>
@@ -39,15 +39,12 @@
             <button type="button" class="noActualizar">Cancelar</button>
         </form>
 
-
         <!-- Contenido principal -->
         <section class="content" id="content">
 
-            <!-- Aquí van las películas -->
-
+            <!-- Aquí se van a cargar las películas -->
 
         </section>
-
 
         <!-- Barra lateral -->
         <aside class="aside">
@@ -65,9 +62,8 @@
             <div class="add">
                 <h3 class="title"> Añadir Película</h3>
 
-                <!-- Creador de películas -->
+                <!-- Formulario para crear películas -->
                 <form id="formFilm">
-
                     <input type="text" id="titleField" placeholder="Título" required>
                     <input type="text" id="genreField" placeholder="Género" required>
                     <input type="text" id="actorsField" placeholder="Actores" required>
@@ -78,7 +74,6 @@
             </div>
 
         </aside>
-
 
         <!-- Pie de página -->
         <footer class="footer">
